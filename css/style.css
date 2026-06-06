@@ -22110,7 +22110,7 @@ textarea.form-control {
 .form-group {
   margin-bottom: 1rem; }
   .form-group label {
-    margin-bottom: 6px; }
+    /* margin-bottom: 6px;*/ }
 
 .form-control-lg {
   height: 60px; }
