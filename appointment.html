@@ -627,9 +627,13 @@
 									<div class="col-xl-4">
 										<div class="form-group">
 											<label>Buscar Paciente</label>
+											<!--
 											<select class="form-control select2" name="paciente_id" id="paciente_id">
-												<option value="">Buscar por HC, DNI o Nombre</option>
+												<option value="">Buscar por HC, DNI</option>
 											</select>
+											-->
+
+											<input type="text" class="form-control" id="paciente_id">
 										</div>
 									</div>
 
@@ -650,6 +654,11 @@
 											<label>Especialidad</label>
 											<select class="form-control" name="especialidad_id" id="especialidad_id">
 												<option value="">Seleccione</option>
+												<option value="">TRAUMATOLOGIA</option>
+												<option value="">MEDICINA FÍSICA Y REHABILITACIÓN</option>
+												<option value="">READIOLOGIA</option>
+												<option value="">NEUROLOGÍA</option>
+												<option value="">REUMATOLOGIA</option>
 											</select>
 										</div>
 									</div>
@@ -658,7 +667,10 @@
 										<div class="form-group">
 											<label>Médico</label>
 											<select class="form-control" name="medico_id" id="medico_id">
-												<option value="">Seleccione</option>
+												<option value="">Seleccionar</option>
+												<option value="">DR QUIROZ</option>
+												<option value="">DR MENOZA</option>
+												<option value="">DR TORRES</option>
 											</select>
 										</div>
 									</div>
@@ -668,6 +680,9 @@
 											<label>Servicio</label>
 											<select class="form-control" name="servicio_id" id="servicio_id">
 												<option value="">Seleccione</option>
+												<option value="1">CONSULTA TRAUMATOLOGIA</option>
+												<option value="2">CONSULTA MFR</option>
+												<option value="3">CONSULTA REUMATOLOGIA</option>
 											</select>
 										</div>
 									</div>
@@ -697,6 +712,8 @@
 											<label>Canal</label>
 											<select class="form-control" name="canal_id">
 												<option value="">Seleccione</option>
+												<option value="">CEO SALUD</option>
+												<option value="">DR QUIROZ</option>
 											</select>
 										</div>
 									</div>
@@ -706,6 +723,11 @@
 											<label>Medio de Interacción</label>
 											<select class="form-control" name="medio_interaccion_id">
 												<option value="">Seleccione</option>
+												<option value="">WHATSAPP</option>
+												<option value="">LLAMADA TELEFÓNICA</option>
+												<option value="">FACEBOOK</option>
+												<option value="">INSTAGRAM</option>
+												<option value="">TIKTOK</option>
 											</select>
 										</div>
 									</div>
@@ -745,14 +767,18 @@
 									<div class="col-xl-3">
 										<div class="form-group">
 											<label>Saldo Pendiente</label>
-											<input type="text" class="form-control" id="saldo_pendiente" readonly>
+											<input type="text" class="form-control" id="saldo_pendiente">
 										</div>
 									</div>
 
 									<div class="col-xl-3">
 										<div class="form-group">
 											<label>Estado Pago</label>
-											<input type="text" class="form-control" id="estado_pago" readonly>
+											<select class="form-control" name="estado_pago">
+												<option value="">Seleccione</option>
+												<option value="">PENDIENTE</option>
+												<option value="">PAGADO</option>
+											</select>
 										</div>
 									</div>
 
@@ -858,6 +884,69 @@
 		jQuery('#datetimepicker2').datetimepicker({
 			datepicker: false,
 			format: 'H:i'
+		});
+	</script>
+
+
+	<script>
+		//SCRIPT PARA LEER LOS DATOS DEL SELECT
+		window.addEventListener('DOMContentLoaded', () => {
+
+			//VARIABLES GLOBALES
+			let paciente_id = document.querySelector('#paciente_id');
+			let servicio_id = document.querySelector('#servicio_id');
+			let precio_programado = document.querySelector('#precio_programado');
+			let paciente_nombre = document.querySelector('#paciente_nombre');
+
+
+			//EVENTOS PARA DATOS
+			paciente_id.addEventListener('input', function (event) {
+				buscarPaciente(event);
+			});
+
+			servicio_id.addEventListener('change', function(event){
+                buscarServicio(event);
+			});
+
+			function buscarPaciente(event) {
+				console.log('PALABRA ESCRITA: ', event.target.value);
+				//PASO 2: API PARA TRAER DATOS DEL PACIENTE
+				
+				if (paciente_id.value === '76395743') {
+					console.log('Si existe la cita');
+					precio_programado.value = 80;
+					paciente_nombre.value = "Anthony Eduardo Nuñez Canchari"
+				} else {
+					console.log('No existe la cita');
+					precio_programado.value = 100;
+					paciente_nombre.value = "No se encontro datos, registre al paciente"
+				}
+			}
+
+			function buscarServicio(event) {
+				//API ARA TRAER DATOS DE SERVICIO, CONSULTAR TABLAS
+				//PACIENTE, SERVICIO Y CITA, Y SI EXISTE CITA
+				//SI HAY CITA -> 20% DESCUENTO (RECONSULTA)
+				//SI NO HAY CITA > SE PAGA EL TOTAL	
+			    console.log('Id del Servicio:', event.target.value);
+				console.log('Documento del Paciente:', paciente_id.value);
+				let cita_encontrada = 1; //true, se encontro
+
+				if(paciente_nombre.value === ''){
+                   alert('Busque al paciente por Documento o historia');
+				}
+
+				if(paciente_id.value === '76395743'&& cita_encontrada === 1){
+                   precio_programado.value = 80;   //CAMPO DE LA BASE DE DATOS
+				} else {
+					precio_programado.value = 100; //CAMPO DE LA BASE DE DATOS
+				}
+			}
+
+
+
+
+
 		});
 	</script>
 
