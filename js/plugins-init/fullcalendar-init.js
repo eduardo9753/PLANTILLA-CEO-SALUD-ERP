@@ -63,7 +63,7 @@
 			  arg.draggedEl.parentNode.removeChild(arg.draggedEl);
 			}
 		  },
-		  initialDate: '2021-02-13',
+		  initialDate: '2026-06-08',
 			  weekNumbers: true,
 			  navLinks: true, // can click day/week names to navigate views
 			  editable: true,
@@ -72,62 +72,62 @@
 		   events: [
 				{
 				  title: 'All Day Event',
-				  start: '2021-02-01'
+				  start: '2026-06-08'
 				},
 				{
 				  title: 'Long Event',
-				  start: '2021-02-07',
-				  end: '2021-02-10',
+				  start: '2026-06-07',
+				  end: '2026-06-08',
 				  className: "bg-danger"
 				},
 				{
 				  groupId: 999,
 				  title: 'Repeating Event',
-				  start: '2021-02-09T16:00:00'
+				  start: '2026-06-08T16:00:00'
 				},
 				{
 				  groupId: 999,
 				  title: 'Repeating Event',
-				  start: '2021-02-16T16:00:00'
+				  start: '2026-06-16T16:00:00'
 				},
 				{
 				  title: 'Conference',
-				  start: '2021-02-11',
-				  end: '2021-02-13',
+				  start: '2026-06-11',
+				  end: '2026-06-13',
 				  className: "bg-danger"
 				},
 				{
 				  title: 'Meeting',
-				  start: '2021-02-12T10:30:00',
-				  end: '2021-02-12T12:30:00',
+				  start: '2026-06-12T10:30:00',
+				  end: '2026-06-12T12:30:00',
 				  className:"bg-info"
 				},
 				{
 				  title: 'Lunch',
-				  start: '2021-02-12T12:00:00'
+				  start: '2026-06-12T12:00:00'
 				},
 				{
 				  title: 'Meeting',
-				  start: '2021-04-12T14:30:00'
+				  start: '2026-04-12T14:30:00'
 				},
 				{
 				  title: 'Happy Hour',
-				  start: '2021-07-12T17:30:00'
+				  start: '2026-07-12T17:30:00'
 				},
 				{
 				  title: 'Dinner',
-				  start: '2021-02-12T20:00:00',
+				  start: '2026-06-12T20:00:00',
 				  className: "bg-warning"
 				},
 				{
 				  title: 'Birthday Party',
-				  start: '2021-02-13T07:00:00',
+				  start: '2026-06-13T07:00:00',
 				  className: "bg-secondary"
 				},
 				{
 				  title: 'Click for Google',
 				  url: 'http://google.com/',
-				  start: '2021-02-28'
+				  start: '2026-06-28'
 				}
 			  ]
 		});
@@ -186,7 +186,7 @@ function fullCalender(){
 			  arg.draggedEl.parentNode.removeChild(arg.draggedEl);
 			}
 		  },
-		  initialDate: '2021-02-13',
+		  initialDate: '2026-06-13',
 			  weekNumbers: true,
 			  navLinks: true, // can click day/week names to navigate views
 			  editable: true,
@@ -195,56 +195,56 @@ function fullCalender(){
 		   events: [
 				{
 				  title: 'All Day Event',
-				  start: '2021-02-01'
+				  start: '2026-06-01'
 				},
 				{
 				  title: 'Long Event',
-				  start: '2021-02-07',
-				  end: '2021-02-10',
+				  start: '2026-06-07',
+				  end: '2026-06-10',
 				  className: "bg-danger"
 				},
 				{
 				  groupId: 999,
 				  title: 'Repeating Event',
-				  start: '2021-02-09T16:00:00'
+				  start: '2026-06-09T16:00:00'
 				},
 				{
 				  groupId: 999,
 				  title: 'Repeating Event',
-				  start: '2021-02-16T16:00:00'
+				  start: '2026-06-16T16:00:00'
 				},
 				{
 				  title: 'Conference',
-				  start: '2021-02-11',
-				  end: '2021-02-13',
+				  start: '2026-06-11',
+				  end: '2026-06-13',
 				  className: "bg-danger"
 				},
 				{
 				  title: 'Lunch',
-				  start: '2021-02-12T12:00:00'
+				  start: '2026-06-12T12:00:00'
 				},
 				{
 				  title: 'Meeting',
-				  start: '2021-04-12T14:30:00'
+				  start: '2026-04-12T14:30:00'
 				},
 				{
 				  title: 'Happy Hour',
-				  start: '2021-07-12T17:30:00'
+				  start: '2026-07-12T17:30:00'
 				},
 				{
 				  title: 'Dinner',
-				  start: '2021-02-12T20:00:00',
+				  start: '2026-06-12T20:00:00',
 				  className: "bg-warning"
 				},
 				{
 				  title: 'Birthday Party',
-				  start: '2021-02-13T07:00:00',
+				  start: '2026-06-13T07:00:00',
 				  className: "bg-secondary"
 				},
 				{
 				  title: 'Click for Google',
 				  url: 'http://google.com/',
-				  start: '2021-02-28'
+				  start: '2026-06-28'
 				}
 			  ]
 		});

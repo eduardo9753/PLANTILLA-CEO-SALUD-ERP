@@ -72,9 +72,9 @@
 @import url(./../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
 @import url(./../vendor/metismenu/css/metisMenu.min.css);
 :root {
-  --primary: #2d8a8c; /*#36C95F*/
+  --primary: #2d8a8c !important; /*#36C95F*/
   --secondary: #A336C9;
-  --primary-hover: #2ba14c;
+  --primary-hover: #187e80;
   --primary-light: #afe9bf;
   --primary-dark: #165026;
   --rgba-primary-1: rgba(54, 201, 95, 0.1);
@@ -319,10 +319,10 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: #3d4465;
-  --bs-link-color: #36C95F;
-  --bs-link-color-rgb: 54, 201, 95;
+  --bs-link-color: #2d8a8c;
+  --bs-link-color-rgb: #2d8a8c;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: #2ba14c;
+  --bs-link-hover-color: #2d8a8c;
   --bs-link-hover-color-rgb: 43, 161, 76;
   --bs-code-color: #e83e8c;
   --bs-highlight-bg: #fffee2;
@@ -344,8 +344,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
   --bs-focus-ring-color: rgba(54, 201, 95, 0.25);
-  --bs-form-valid-color: #2bc155;
-  --bs-form-valid-border-color: #2bc155;
+  --bs-form-valid-color: #2d8a8c;
+  --bs-form-valid-border-color: #2d8a8c;
   --bs-form-invalid-color: #F46B68;
   --bs-form-invalid-border-color: #F46B68; }
 
@@ -365,7 +365,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-tertiary-color-rgb: 173, 181, 189;
   --bs-tertiary-bg: #2b3035;
   --bs-tertiary-bg-rgb: 43, 48, 53;
-  --bs-primary-text-emphasis: #86df9f;
+  --bs-primary-text-emphasis: #2d8a8c;
   --bs-secondary-text-emphasis: #c886df;
   --bs-success-text-emphasis: #80da99;
   --bs-info-text-emphasis: #86c4df;
@@ -381,9 +381,9 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   --bs-danger-bg-subtle: #311515;
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
-  --bs-primary-border-subtle: #207939;
+  --bs-primary-border-subtle: #2d8a8c;
   --bs-secondary-border-subtle: #622079;
-  --bs-success-border-subtle: #1a7433;
+  --bs-success-border-subtle: #2d8a8c;
   --bs-info-border-subtle: #205e79;
   --bs-warning-border-subtle: #996e00;
   --bs-danger-border-subtle: #92403e;
@@ -2220,7 +2220,7 @@ textarea.form-control-lg {
   .form-range::-moz-range-thumb {
     width: 1rem;
     height: 1rem;
-    background-color: #36C95F;
+    background-color: #2d8a8c;;
     border: 0;
     border-radius: 1rem;
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2631,12 +2631,12 @@ textarea.form-control-lg {
   --bs-btn-bg: #2d8a8c;
   --bs-btn-border-color: #2d8a8c;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #54d177;
-  --bs-btn-hover-border-color: #4ace6f;
+  --bs-btn-hover-bg: #34979b;
+  --bs-btn-hover-border-color: #129094;
   --bs-btn-focus-shadow-rgb: 46, 171, 81;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #5ed47f;
-  --bs-btn-active-border-color: #4ace6f;
+  --bs-btn-active-bg: #0d8a8f;
+  --bs-btn-active-border-color: #129094;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #2d8a8c;

@@ -34,6 +34,14 @@
 	<!-- Style Css -->
 
 	<link href="css/style.css" rel="stylesheet">
+	<style>
+		.oculto_card_responsable {
+			display: none;
+		}
+	</style>
+	<!-- DATATABLES CSS -->
+	<link rel="stylesheet" href="lib/datatable/dataTables.css">
+	<link rel="stylesheet" href="lib/datatable/dataTables.min.css">
 
 </head>
 
@@ -63,7 +71,8 @@
         ***********************************-->
 		<div class="nav-header">
 			<a href="dashboard.html" class="brand-logo">
-				<img src="images/logo-full.png" class="img-fluid" style="width: 100%;height: 45px;object-fit: contain;" alt="">
+				<img src="images/logo-full.png" class="img-fluid" style="width: 100%;height: 45px;object-fit: contain;"
+					alt="">
 			</a>
 
 			<div class="nav-control">
@@ -76,7 +85,7 @@
             Nav header end
         ***********************************-->
 
-		
+
 
 		<!--**********************************
             Header start
@@ -180,8 +189,8 @@
 							<li><a href="appointment.html">Registrar Cita</a></li>
 						</ul>
 					</li>
-					
-					
+
+
 					<li><a href="javascript:void(0);" class="ai-icon has-arrow" aria-expanded="false">
 							<i class="flaticon-381-id-card-4"></i>
 							<span class="nav-text">Usuarios</span>
@@ -192,10 +201,13 @@
 					</li>
 				</ul>
 
-				<div class="plus-box">
-					<p class="fs-16 font-w500 mb-1">Celendario y Horarios</p>
-					<a class="text-white fs-26" href="javascript:;"><i class="las la-long-arrow-alt-right"></i></a>
-				</div>
+				<a href="app-calender.html">
+					<div class="plus-box">
+						<p class="fs-16 font-w500 mb-1">Celendario y Horarios</p>
+						<p class="text-white fs-26"> <i class="las la-long-arrow-alt-right"></i></p>
+					</div>
+				</a>
+
 				<div class="copyright">
 					<p class="fs-14 font-w200"><strong class="font-w400">ERP CEO SALUD </strong> © 2026
 						Todos los Derechos Reservados</p>
@@ -206,39 +218,36 @@
 		<!--**********************************
             Sidebar end
         ***********************************-->
-		
+
 		<!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
-            <!-- row -->
+		<div class="content-body">
+			<!-- row -->
 			<div class="container-fluid">
 				<div class="form-head d-flex mb-3 mb-md-4 justify-content-between w-100">
 					<div class="">
-						<a href="javascript:void(0);" class="btn btn-primary btn-rounded add-appointment" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Agregar Paciente</a>
+						<a href="javascript:void(0);" class="btn btn-primary btn-rounded add-appointment"
+							data-bs-toggle="modal" data-bs-target="#exampleModal">+ Agregar Paciente</a>
 					</div>
 
-					<div class="input-group search-area d-inline-flex me-2">
-						<input type="text" class="form-control" placeholder="Search here">
-						<div class="input-group-append">
-							<button type="button" class="input-group-text"><i class="flaticon-381-search-2"></i></button>
-						</div>
-					</div>
+
 				</div>
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="card">
 							<div class="card-body p-0">
 								<div class="table-responsive">
-									<table id="example5" class="table table-striped patient-list mb-4 dataTablesCard fs-14">
+									<table id="datatable"
+										class="table table-striped patient-list mb-4 dataTablesCard fs-14">
 										<thead>
 											<tr>
-												<th>Nombre</th>
-												<th>Genero</th>
-												<th>Email</th>
-												<th>Telefono</th>
-												<th>Dirección</th>
-												<th>Nacimiento</th>
+												<th>Nombre y Apellidos</th>
+												<th>Nro.HC</th>
+												<th>Tipo iden.</th>
+												<th>Nro documento</th>
+												<th>Sexo</th>
+												<th>Edad</th>
 												<th class="text-end">Acciones</th>
 											</tr>
 										</thead>
@@ -248,350 +257,47 @@
 													<span>
 														<img src="images/avatar/2.jpg" alt="">
 													</span>
-													<span class="text-nowrap ms-2">Matthew</span>
+													<span class="text-nowrap ms-2">Matthew Cordova</span>
 												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">	
-													<span class="me-3">
-														<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/3.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Isabella</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
+												<td class="text-primary">4890</td>
+												<td class="text-primary">DNI</td>
+												<td>67543456</td>
+												<td><button class="btn btn-primary">HOMBRE</button></td>
+												<td>45</td>
 												<td class="text-end">
 													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
+														<a href="javascript:void(0);" class="edit-staff"><i
+																class="fa fa-pencil fs-18 text-success"></i></a>
+													</span>
 													<span>
 														<i class="fa fa-trash fs-18 text-danger"></i>
 													</span>
 												</td>
 											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/1.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Sophia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-														<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/4.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Amelia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/5.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Charlotte</span>
-												</td>
-												<td>
-													<span>M</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/6.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Emma</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/7.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Olivia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
+
 											<tr>
 												<td class="patient-info ps-0">
 													<span>
 														<img src="images/avatar/2.jpg" alt="">
 													</span>
-													<span class="text-nowrap ms-2">Matthew</span>
+													<span class="text-nowrap ms-2">Gabriela Ladera</span>
 												</td>
-												<td>
-													<span>M</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">	
-													<span class="me-3">
-														<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/3.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Isabella</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
+												<td class="text-primary">4891</td>
+												<td class="text-primary">DNI</td>
+												<td>87567545</td>
+												<td><button class="btn btn-danger">MUJER</button></td>
+												<td>45</td>
 												<td class="text-end">
 													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
+														<a href="javascript:void(0);" class="edit-staff"><i
+																class="fa fa-pencil fs-18 text-success"></i></a>
+													</span>
 													<span>
 														<i class="fa fa-trash fs-18 text-danger"></i>
 													</span>
 												</td>
 											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/1.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Sophia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-														<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/4.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Amelia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/5.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Charlotte</span>
-												</td>
-												<td>
-													<span>M</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/6.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Emma</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												<td class="text-primary">hello@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="patient-info ps-0">
-													<span>
-														<img src="images/avatar/7.jpg" alt="">
-													</span>
-													<span class="text-nowrap ms-2">Olivia</span>
-												</td>
-												<td>
-													<span>F</span>
-												</td>
-												
-												<td class="text-primary">gabriel@gmail.com</td>
-												<td class="text-primary">9876512345</td>
-												<td>1310 Glenwood Avenue</td>
-												
-												<td>22 Mar 2021</td>
-												<td class="text-end">
-													<span class="me-3">
-													<a href="javascript:void(0);" class="edit-staff"><i class="fa fa-pencil fs-18 text-success"></i></a>
-													</span>	
-													<span>
-														<i class="fa fa-trash fs-18 text-danger"></i>
-													</span>
-												</td>
-											</tr>
+
 										</tbody>
 									</table>
 								</div>
@@ -599,166 +305,251 @@
 						</div>
 					</div>
 				</div>
-            </div>
-			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Paciente</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-					</button>
-				  </div>
-				  <div class="modal-body">
-					<form>
-					<div class="row">
-						<!--
+			</div>
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Paciente</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="row">
+									<!--
 						<div class="col-xl-12">
 							<div class="form-group">
 								<label  class="col-form-label">Historia Clinica:</label>
 								<input type="text" class="form-control" id="name1" placeholder="4544">
 							 </div>
                          -->
-							 <div class="col-xl-12">
-							<div class="form-group">
-								<label class="col-form-label">Nombre:</label>
-								 <input type="text" class="form-control" id="name1" placeholder="Name">
-							</div>
-						</div>
-						
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Apellido Paterno:</label>
-								 <input type="text" class="form-control" id="name2" placeholder="Last Name">
-							</div>
-						</div>
+									<div class="col-xl-12">
+										<div class="form-group">
+											<div class="d-flex justify-content-between">
+												<label class="col-form-label">Nombre:</label>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Apellido Materno:</label>
-								 <input type="text" class="form-control" id="name2" placeholder="Last Name">
-							</div>
-						</div>
+												<div>
+													<input type="checkbox" id="responsable_id" name="responsable_id"
+														value="Bike">
+													<label for="responsable_id"> Viene acompañado?</label><br>
+												</div>
+											</div>
+											<input type="text" class="form-control" name="nombre_paciente"
+												id="nombre_paciente" placeholder="Name">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Sexo:</label>
-								<select class="form-control">
-								   <option>M</option>
-								   <option>F</option>
-								</select>
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno"
+												id="apellido_paterno" placeholder="Last Name">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Tipo Identificación:</label>
-								<select class="form-control">
-								  <option>DNI</option>
-								   <option>CE</option>
-								   <option>PTP</option>
-								   <option>TAM</option>
-								   <option>RUC</option>
-								   <option>SIN DOCUMENTOS</option>
-								   <option>CE</option>
-								   <option>DNI</option>
-								   <option>PASAPORTE</option>
-								</select>
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno"
+												id="apellido_materno" placeholder="Last Name">
+										</div>
+									</div>
+
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Genero:</label>
+											<select class="form-control" name="genero_paciente" id="genero_paciente">
+												<option>M</option>
+												<option>F</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Tipo Identificación:</label>
+											<select class="form-control" name="tipo_identificacion"
+												id="tipo_identificacion">
+												<option>DNI</option>
+												<option>CE</option>
+												<option>PTP</option>
+												<option>TAM</option>
+												<option>RUC</option>
+												<option>SIN DOCUMENTOS</option>
+												<option>CE</option>
+												<option>DNI</option>
+												<option>PASAPORTE</option>
+											</select>
+										</div>
+									</div>
 
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Número de identidad:</label>
-								<input size="16" type="number"  class="form-control" placeholder="987654321">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Número de identidad:</label>
+											<input size="16" type="number" name="numero_identidad" id="numero_identidad"
+												class="form-control" placeholder="987654321">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Fecha de Nacimiento:</label>
-								<input type="date"  class="form-control" placeholder="987654321">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Fecha de Nacimiento:</label>
+											<input type="date" class="form-control" name="fecha_nacimiento"
+												id="fecha_nacimiento" placeholder="987654321">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Ocupación:</label>
-								<input type="text" class="form-control" placeholder="">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Ocupación:</label>
+											<input type="text" class="form-control" name="ocupacion" id="ocupacion"
+												placeholder="">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label  class="col-form-label">Grado de Instrucción</label>
-								<input type="text" class="form-control" id="moblie1" placeholder="basico">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Grado de Instrucción</label>
+											<input type="text" class="form-control" name="grado_instruccion"
+												id="grado_instruccion" placeholder="basico">
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label  class="col-form-label">Email:</label>
-								 <input type="text" class="form-control" id="moblie1" placeholder="ejemplo@gmail.com">
-							</div>
-						</div>
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label class="col-form-label">Estado civil:</label>
-								<select class="form-control">
-								  <option>SOLTERO</option>
-								   <option>CASADO</option>
-								   <option>VIUDO</option>
-								   <option>DIVORCIADO</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label  class="col-form-label">Celular:</label>
-								 <input type="text" class="form-control" id="fever" placeholder="999888777">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Email:</label>
+											<input type="email" class="form-control" name="email" id="email"
+												placeholder="ejemplo@gmail.com">
+										</div>
+									</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Estado civil:</label>
+											<select class="form-control" name="estado_civil" id="estado_civil">
+												<option>SOLTERO</option>
+												<option>CASADO</option>
+												<option>VIUDO</option>
+												<option>DIVORCIADO</option>
+											</select>
+										</div>
+									</div>
 
-						<div class="col-xl-4">
-							<div class="form-group">
-								<label  class="col-form-label">Dirección:</label>
-								 <input type="text" class="form-control" id="fever" placeholder="Av prolongación">
-							</div>
-						</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Celular:</label>
+											<input type="text" class="form-control" name="celular" id="celular"
+												placeholder="999888777">
+										</div>
+									</div>
 
-						<div class="col-xl-12">
-							<div class="form-group">
-								<label  class="col-form-label">Familiar de Contacto:</label>
-								 <input type="text" class="form-control" id="fever" placeholder="datos del familiar">
-							</div>
+									<div class="col-xl-4">
+										<div class="form-group">
+											<label class="col-form-label">Dirección:</label>
+											<input type="text" class="form-control" name="direccion" id="direccion"
+												placeholder="Av prolongación">
+										</div>
+									</div>
+
+									<div class="col-xl-12">
+										<div class="form-group">
+											<label class="col-form-label">Familiar de Contacto:</label>
+											<input type="text" class="form-control" name="familiar_contacto"
+												id="familiar_contacto" placeholder="datos del familiar">
+										</div>
+									</div>
+
+
+
+									<!--DATOS DEL ACOMPAÑANTE SE ACTIVARA CUANDO LE DEMOS CLICK-->
+									<div class="card oculto_card_responsable" id="modal_responsable">
+										<div class="card-body row">
+											<div class="col-xl-8">
+												<div class="form-group">
+													<label for="col-form-label">Nombres del acompañante:</label>
+													<input type="text" class="form-control" name="nombre_acompañante"
+														id="nombre_acompañante" placeholder="Maria Cardenas">
+												</div>
+											</div>
+
+											<div class="col-xl-4">
+												<div class="form-group">
+													<label for="col-form-label">Telefono del acompañante:</label>
+													<input type="text" class="form-control" name="telefono_responsable">
+												</div>
+
+											</div>
+
+											<div class="col-xl-4">
+												<div class="form-group">
+													<label class="col-form-label">Tipo Identificación:</label>
+													<select class="form-control" name="tipo_identificacion_responsable"
+														id="tipo_identificacion_responsable">
+														<option>DNI</option>
+														<option>CE</option>
+														<option>PTP</option>
+														<option>TAM</option>
+														<option>RUC</option>
+														<option>SIN DOCUMENTOS</option>
+														<option>CE</option>
+														<option>DNI</option>
+														<option>PASAPORTE</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-xl-4">
+												<div class="form-group">
+													<label class="col-form-label">Número de identidad:</label>
+													<input size="16" type="number" name="numero_identidad_responsable"
+														id="numero_identidad_responsable" class="form-control"
+														placeholder="67543432">
+												</div>
+											</div>
+
+											<div class="col-xl-4">
+												<div class="form-group">
+													<label class="col-form-label" for="">Responsable:</label>
+													<select class="form-control" name="responsable" id="responsable">
+														<option value="">PAPÁ</option>
+														<option value="">MAMÁ</option>
+														<option value="">HERMANO</option>
+														<option value="">PRIMO</option>
+														<option value="">AMIGO</option>
+														<option value="">CONOCIDO CERCANO</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+							<input type="submit" class="btn btn-primary" value="Guardar Datos">
 						</div>
 					</div>
-					 
-					
-					</form>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Send message</button>
-				  </div>
 				</div>
-			  </div>
 			</div>
-        </div>
-        <!--**********************************
+		</div>
+		<!--**********************************
             Content body end
         ***********************************-->
 
-        <!--**********************************
+		<!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2023</p>
-            </div>
-        </div>
-        <!--**********************************
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/"
+						target="_blank">DexignZone</a> 2023</p>
+			</div>
+		</div>
+		<!--**********************************
             Footer end
         ***********************************-->
 
@@ -766,56 +557,67 @@
            Support ticket button start
         ***********************************-->
 
-        <!--**********************************
+		<!--**********************************
            Support ticket button end
         ***********************************-->
 
 
-    </div>
-    <!--**********************************
+	</div>
+	<!--**********************************
         Main wrapper end
     ***********************************-->
 
-    <!--**********************************
+	<!--**********************************
         Scripts
     ***********************************-->
-    <!-- Required vendors -->
-     <script src="vendor/global/global.min.js"></script>
+	<!-- Required vendors -->
+	<script src="vendor/global/global.min.js"></script>
 	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 	<script src="vendor/chart.js/Chart.bundle.min.js"></script>
 	<script src="vendor/owl-carousel/owl.carousel.js"></script>
-	 <!-- clockpicker -->
-    <script src="vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
-	 <!-- Clockpicker init -->
-    <script src="./js/plugins-init/clock-picker-init.js"></script>
-	
+	<!-- clockpicker -->
+	<script src="vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+	<!-- Clockpicker init -->
+	<script src="./js/plugins-init/clock-picker-init.js"></script>
+
 	<script src="vendor/bootstrap-datetimepicker/js/moment.js"></script>
 	<script src="vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
 	<!-- Datatable -->
-	<script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="lib/datatable/dataTables.js"></script>
+	<script src="lib/datatable/dataTables.min.js"></script>
+
 	<script src="js/custom.min.js"></script>
 	<script src="js/deznav-init.js"></script>
-	
-   
-	
+
+
+
 	<script>
-		(function($) {
-		 
-			var table = $('#example5').DataTable({
-				searching: false,
-				paging:true,
-				select: false,
-				//info: false,         
-				lengthChange:false 
-				
-			});
-			$('#example tbody').on('click', 'tr', function () {
-				var data = table.row( this ).data();
-				
-			});
-		   
-		})(jQuery);
+		//EL ACTUAL
+		window.addEventListener('DOMContentLoaded', () => {
+			let table = new DataTable('#datatable');
+		});
 	</script>
-	
+
+	<script>
+		window.addEventListener('DOMContentLoaded', function () {
+			let responsable_id = document.querySelector('#responsable_id');
+			let modal_responsable = document.querySelector('#modal_responsable');
+
+			responsable_id.addEventListener('change', function (event) {
+				console.log(event);
+
+				if (event.target.checked) {
+					console.log('vino con su responsable');
+					modal_responsable.classList.remove('oculto_card_responsable')
+				} else {
+					console.log('no vino con su responsable');
+					modal_responsable.classList.add('oculto_card_responsable');
+				}
+			})
+		})
+	</script>
+
 </body>
+
 </html>
